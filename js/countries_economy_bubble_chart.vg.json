@@ -4,7 +4,7 @@
   "height": 600,
   "title": "PPP and PPP per Capita of Countries (2013 - 2023)",
   "data": {
-    "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/PPP_from_2013_to_2023_billion.csv"
+    "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/PPP_from_2013_to_2023.csv"
   },
   "params": [
     {
