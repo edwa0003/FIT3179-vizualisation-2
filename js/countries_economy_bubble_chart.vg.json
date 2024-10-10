@@ -76,13 +76,13 @@
       "field": "PPP",
       "type": "quantitative",
       "title": "PPP (Billions)",
-      "scale": {"type": "log", "domain": [1, 100000]}
+      "scale": {"type": "log", "domain": [0.01, 50000]}
     },
     "y": {
       "field": "PPP_per_capita",
       "type": "quantitative",
-      "title": "PPP per Capita",
-      "scale": {"type": "log", "domain": [1, 100000]}
+      "title": "PPP per Capita (Thousands)",
+      "scale": {"type": "log", "domain": [0.5, 180]}
     }
   },
   "layer": [
