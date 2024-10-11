@@ -1,108 +1,99 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "World Countries Corporate Tax Rates 2023",
-    "width": "container",
-    "height": 500,
+    "title": "Startup Cities Development Score Map",
+    "width": 1200,
+    "height": 800,
     "params": [
-        {
-            "name": "zoom_level",
-            "value": 300,
-            "bind": {
-                "input": "range",
-                "min": 100,
-                "max": 1000,
-                "step": 50,
-                "name": "Zoom: "
-            }
-        },
-        {
-            "name": "center_to",
-            "value": [0, 20],
-            "bind": {
-                "input": "select",
-                "options": [
-                    [0, 20],
-                    [-95, 37],
-                    [10, 51],
-                    [100, 15]
-                ],
-                "labels": ["Global", "North America", "Europe", "South East Asia"],
-                "name": "Map Centre: "
-            }
-        },
-        {
-            "name": "tax_rate_filter",
-            "value": 50,
-            "bind": {
-                "input": "range",
-                "min": 0,
-                "max": 50,
-                "step": 1,
-                "name": "Corporate Tax Rate Filter: "
-            }
+      {
+        "name": "zoom_level",
+        "value": 300,
+        "bind": {
+          "input": "range",
+          "min": 100,
+          "max": 1000,
+          "step": 50,
+          "name": "Zoom: "
         }
+      },
+      {
+        "name": "center_to",
+        "value": [0, 0],
+        "bind": {
+          "input": "select",
+          "options": [
+            [0, 0],
+            [-74.006, 40.7128],
+            [121.4737, 31.2304],
+            [4.9041, 52.3676]
+          ],
+          "labels": ["Global", "United States", "China", "Europe"],
+          "name": "Map Centre: "
+        }
+      }
     ],
     "projection": {
-        "type": "equirectangular",
-        "center": { "expr": "center_to" },
-        "scale": { "expr": "zoom_level" }
+      "type": "equalEarth",
+      "center": { "expr": "center_to" },
+      "scale": { "expr": "zoom_level" }
     },
     "layer": [
-        {
-            "data": {
-                "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-                "format": { "type": "topojson", "feature": "countries" }
-            },
-            "mark": {
-                "type": "geoshape",
-                "fill": "#ddd",
-                "stroke": "white",
-                "strokeWidth": 1
-            },
-            "encoding": {
-                "tooltip": { "field": "properties.name", "type": "nominal", "title": "Country" }
-            }
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
+          "format": { "type": "topojson", "feature": "land" }
         },
-        {
-            "data": {
-                "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-week-10-homework/refs/heads/main/data/corporate_tax_rates_2023.csv"
-            },
-            "transform": [
-                {
-                    "lookup": "id",
-                    "from": {
-                        "data": {
-                            "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-                            "format": {
-                                "type": "topojson",
-                                "feature": "countries"
-                            }
-                        },
-                        "key": "id"
-                    },
-                    "as": "geo"
-                },
-                { "filter": "datum.tax_rate < tax_rate_filter" }
-            ],
-            "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
-            "encoding": {
-                "shape": { "field": "geo", "type": "geojson" },
-                "color": {
-                    "field": "tax_rate",
-                    "type": "quantitative",
-                    "scale": {
-                        "type": "linear",
-                        "domain": [0, 50],
-                        "range": ["#1f77b4", "#FFFF00"]
-                    },
-                    "legend": { "title": "Corporate Tax Rate (%)" }
-                },
-                "tooltip": [
-                    { "field": "Country", "type": "nominal", "title": "Country" },
-                    { "field": "tax_rate", "type": "quantitative", "title": "Corporate Tax Rate (%)", "format": ".1f" }
-                ]
-            }
+        "mark": {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "tooltip": { "field": "properties.name", "type": "nominal", "title": "Country" }
         }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv"
+        },
+        "mark": {
+          "type": "circle",
+          "color": "steelblue",
+          "opacity": 0.7
+        },
+        "encoding": {
+          "longitude": {
+            "field": "Longitude",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "Latitude",
+            "type": "quantitative"
+          },
+          "size": {
+            "field": "Development score",
+            "type": "quantitative",
+            "title": "Development Score",
+            "scale": {
+              "domain": [0, 100],
+              "range": [10, 300]
+            }
+          },
+          "tooltip": [
+            {"field": "City", "type": "nominal"},
+            {"field": "Development score", "type": "quantitative"},
+            {"field": "Capital raised", "type": "quantitative"},
+            {"field": "Growth score", "type": "quantitative"},
+            {"field": "Deal count", "type": "quantitative"},
+            {"field": "Exit value", "type": "quantitative"}
+          ]
+        }
+      }
     ],
-    "config": {}
-}
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      },
+      "background": "#f8f9fa"
+    }
+  }

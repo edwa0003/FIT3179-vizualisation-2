@@ -10,7 +10,7 @@
     "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
     "format": {
       "type": "topojson",
-      "feature": "countries"
+      "feature": "land"
     }
   },
   "projection": {
@@ -66,6 +66,17 @@
           {"field": "Deal count", "type": "quantitative"},
           {"field": "Exit value", "type": "quantitative"}
         ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "region",
+      "value": "World",
+      "bind": {
+        "input": "select",
+        "options": ["World", "North America", "Europe", "East Asia"],
+        "labels": ["World", "North America", "Europe", "East Asia"]
       }
     }
   ],
