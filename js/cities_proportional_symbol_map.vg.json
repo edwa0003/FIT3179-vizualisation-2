@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
+    "format": {
+      "type": "topojson",
+      "feature": "countries"
+    }
+  },
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.properties.name !== 'Antarctica'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      },
+      "encoding": {
+        "shape": {
+          "field": "geometry",
+          "type": "geojson"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"city": "San Francisco", "latitude": 37.7749, "longitude": -122.4194, "capital_raised": 427.6},
+          {"city": "New York", "latitude": 40.7128, "longitude": -74.0060, "capital_raised": 179.9},
+          {"city": "Beijing", "latitude": 39.9042, "longitude": 116.4074, "capital_raised": 161.2},
+          {"city": "Shanghai", "latitude": 31.2304, "longitude": 121.4737, "capital_raised": 130.3},
+          {"city": "Los Angeles", "latitude": 34.0522, "longitude": -118.2437, "capital_raised": 144.6},
+          {"city": "London", "latitude": 51.5074, "longitude": -0.1278, "capital_raised": 120.5},
+          {"city": "Bangalore", "latitude": 12.9716, "longitude": 77.5946, "capital_raised": 102.1},
+          {"city": "Tel Aviv", "latitude": 32.0853, "longitude": 34.7818, "capital_raised": 95.3},
+          {"city": "Paris", "latitude": 48.8566, "longitude": 2.3522, "capital_raised": 85.4},
+          {"city": "Singapore", "latitude": 1.3521, "longitude": 103.8198, "capital_raised": 83.9},
+          {"city": "Berlin", "latitude": 52.5200, "longitude": 13.4050, "capital_raised": 79.6},
+          {"city": "Tokyo", "latitude": 35.6895, "longitude": 139.6917, "capital_raised": 76.2},
+          {"city": "Sydney", "latitude": -33.8688, "longitude": 151.2093, "capital_raised": 72.3},
+          {"city": "Stockholm", "latitude": 59.3293, "longitude": 18.0686, "capital_raised": 69.7},
+          {"city": "Toronto", "latitude": 43.6511, "longitude": -79.3837, "capital_raised": 68.4},
+          {"city": "Amsterdam", "latitude": 52.3676, "longitude": 4.9041, "capital_raised": 66.8},
+          {"city": "Dubai", "latitude": 25.2048, "longitude": 55.2708, "capital_raised": 63.2},
+          {"city": "Dublin", "latitude": 53.3498, "longitude": -6.2603, "capital_raised": 62.1},
+          {"city": "Hong Kong", "latitude": 22.3193, "longitude": 114.1694, "capital_raised": 60.4},
+          {"city": "Seoul", "latitude": 37.5665, "longitude": 126.9780, "capital_raised": 58.3}
+        ]
+      },
+      "mark": "circle",
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "capital_raised",
+          "type": "quantitative",
+          "title": "Capital Raised (in millions)"
+        },
+        "tooltip": [
+          {"field": "city", "type": "nominal"},
+          {"field": "capital_raised", "type": "quantitative", "title": "Capital Raised (in millions)"}
+        ]
+      }
+    }
+  ]
+}
