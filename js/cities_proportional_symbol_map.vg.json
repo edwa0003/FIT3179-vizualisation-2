@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Startup Cities Development Score Map",
-  "width": 500,
-  "height": 500,
+  "title": "Global Startup Ecosystem Ranking Map",
+  "width": 400,
+  "height": 400,
   "params": [
     {
       "name": "zoom_level",
@@ -17,50 +17,42 @@
     },
     {
       "name": "center_to",
-      "value": [50, 0],
+      "value": [0, 20],
       "bind": {
         "input": "select",
         "options": [
-          [50, 0],
-          [-60, 40],
-          [-120, 40],
-          [120, 30],
-          [10, 50]
+          [0, 20],
+          [-75, 38],
+          [-120, 37],
+          [10, 50],
+          [100, 35]
         ],
-        "labels": ["Global", "US East Coast", "US West Coast", "China", "Europe"],
+        "labels": ["Global", "US East Coast", "US West Coast", "Europe", "China"],
         "name": "Map Centre: "
       }
     }
   ],
   "projection": {
     "type": "equalEarth",
-    "center": { "expr": "center_to" },
-    "scale": { "expr": "zoom_level" }
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
   },
   "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
-        "format": { "type": "topojson", "feature": "land" }
+        "format": {"type": "topojson", "feature": "land"}
       },
       "mark": {
         "type": "geoshape",
         "fill": "lightgray",
-        "stroke": "white",
-        "strokeWidth": 1
-      },
-      "encoding": {
-        "tooltip": {
-          "field": "properties.name",
-          "type": "nominal",
-          "title": "Country"
-        }
+        "stroke": "white"
       }
     },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
-        "format": { "type": "topojson", "feature": "countries" }
+        "format": {"type": "topojson", "feature": "countries"}
       },
       "mark": {
         "type": "geoshape",
@@ -72,46 +64,38 @@
     {
       "data": {
         "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv",
-        "format": { "type": "csv" }
+        "format": {"type": "csv"}
       },
       "mark": {
         "type": "circle",
         "color": "steelblue",
-        "opacity": 0.7
+        "opacity": 0.6
       },
       "encoding": {
-        "longitude": {
-          "field": "Longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "Latitude",
-          "type": "quantitative"
-        },
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
-          "field": "Development score",
+          "field": "Rank",
           "type": "quantitative",
-          "title": "Development Score",
-          "scale": {
-            "domain": [0, 100],
-            "range": [10, 500]
-          }
+          "title": "Rank",
+          "scale": {"range": [10, 500]}
         },
         "tooltip": [
-          { "field": "City", "type": "nominal" },
-          { "field": "Development score", "type": "quantitative" },
-          { "field": "Capital raised", "type": "quantitative" },
-          { "field": "Growth score", "type": "quantitative" },
-          { "field": "Deal count", "type": "quantitative" },
-          { "field": "Exit value", "type": "quantitative" }
+          {"field": "Ecosystems", "type": "nominal", "title": "Ecosystem"},
+          {"field": "Rank", "type": "ordinal", "title": "Rank"},
+          {"field": "Region", "type": "nominal", "title": "Region"},
+          {"field": "Performance", "type": "quantitative", "title": "Performance"},
+          {"field": "Funding", "type": "quantitative", "title": "Funding"},
+          {"field": "Connectedness", "type": "quantitative", "title": "Connectedness"},
+          {"field": "Market Reach", "type": "quantitative", "title": "Market Reach"},
+          {"field": "Talent", "type": "quantitative", "title": "Talent"},
+          {"field": "Knowledge", "type": "quantitative", "title": "Knowledge"}
         ]
       }
     }
   ],
   "config": {
-    "view": {
-      "stroke": "transparent"
-    },
-    "background": "#f8f9fa"
+    "view": {"stroke": "transparent"},
+    "background": "#f0f0f0"
   }
 }
