@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv"
+    },
+    "transform": [
+      {
+        "filter": {
+          "param": "citySelection",
+          "empty": false
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "citySelection",
+        "select": {
+          "type": "point",
+          "fields": ["City"]
+        },
+        "bind": {
+          "City": {
+            "input": "select",
+            "options": ["San Francisco", "New York", "Beijing"]
+          }
+        }
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "theta": {
+        "field": "Metric",
+        "type": "nominal",
+        "sort": null
+      },
+      "radius": {
+        "field": "Value",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "City",
+        "type": "nominal"
+      }
+    }
+  }
