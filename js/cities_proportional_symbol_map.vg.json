@@ -78,7 +78,7 @@
           "field": "Rank",
           "type": "quantitative",
           "title": "Rank",
-          "scale": {"range": [10, 500]}
+          "scale": {"range": [300, 50]}
         },
         "tooltip": [
           {"field": "Ecosystems", "type": "nominal", "title": "Ecosystem"},
