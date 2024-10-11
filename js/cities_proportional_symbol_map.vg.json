@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Startup Cities Development Score Map",
-  "width": 1200,
-  "height": 800,
+  "width": 500,
+  "height": 500,
   "params": [
     {
       "name": "zoom_level",
@@ -23,10 +23,11 @@
         "options": [
           [100, 0],
           [-60, 40],
-          [150, 30],
-          [50, 50]
+          [-120, 40],
+          [120, 30],
+          [10, 50]
         ],
-        "labels": ["Global", "United States", "China", "Europe"],
+        "labels": ["Global", "US East Coast", "US West Coast", "China", "Europe"],
         "name": "Map Centre: "
       }
     }
