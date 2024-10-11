@@ -1,27 +1,52 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Startup Cities Development Score Map",
   "width": 1200,
   "height": 800,
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
-    "format": {
-      "type": "topojson",
-      "feature": "land"
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 300,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 1000,
+        "step": 50,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [100, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [100, 0],
+          [-60, 40],
+          [150, 30],
+          [50, 50]
+        ],
+        "labels": ["Global", "United States", "China", "Europe"],
+        "name": "Map Centre: "
+      }
     }
-  },
+  ],
   "projection": {
-    "type": "equalEarth"
+    "type": "equalEarth",
+    "center": { "expr": "center_to" },
+    "scale": { "expr": "zoom_level" }
   },
   "layer": [
     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
+        "format": { "type": "topojson", "feature": "land" }
+      },
       "mark": {
         "type": "geoshape",
         "fill": "lightgray",
-        "stroke": "white"
+        "stroke": "white",
+        "strokeWidth": 1
       },
       "encoding": {
         "tooltip": {
@@ -33,7 +58,20 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv"
+        "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/world-110m.json",
+        "format": { "type": "topojson", "feature": "countries" }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "black",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv",
+        "format": { "type": "csv" }
       },
       "mark": {
         "type": "circle",
@@ -55,28 +93,17 @@
           "title": "Development Score",
           "scale": {
             "domain": [0, 100],
-            "range": [10, 300]
+            "range": [10, 500]
           }
         },
         "tooltip": [
-          {"field": "City", "type": "nominal"},
-          {"field": "Development score", "type": "quantitative"},
-          {"field": "Capital raised", "type": "quantitative"},
-          {"field": "Growth score", "type": "quantitative"},
-          {"field": "Deal count", "type": "quantitative"},
-          {"field": "Exit value", "type": "quantitative"}
+          { "field": "City", "type": "nominal" },
+          { "field": "Development score", "type": "quantitative" },
+          { "field": "Capital raised", "type": "quantitative" },
+          { "field": "Growth score", "type": "quantitative" },
+          { "field": "Deal count", "type": "quantitative" },
+          { "field": "Exit value", "type": "quantitative" }
         ]
-      }
-    }
-  ],
-  "params": [
-    {
-      "name": "region",
-      "value": "World",
-      "bind": {
-        "input": "select",
-        "options": ["World", "North America", "Europe", "East Asia"],
-        "labels": ["World", "North America", "Europe", "East Asia"]
       }
     }
   ],
