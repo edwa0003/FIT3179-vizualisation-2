@@ -14,11 +14,6 @@
   },
   "layer": [
     {
-      "transform": [
-        {
-          "filter": "datum.properties.name !== 'Antarctica'"
-        }
-      ],
       "mark": {
         "type": "geoshape",
         "fill": "lightgray",
@@ -34,26 +29,26 @@
     {
       "data": {
         "values": [
-          {"city": "San Francisco", "latitude": 37.7749, "longitude": -122.4194, "capital_raised": 427.6},
-          {"city": "New York", "latitude": 40.7128, "longitude": -74.0060, "capital_raised": 179.9},
-          {"city": "Beijing", "latitude": 39.9042, "longitude": 116.4074, "capital_raised": 161.2},
-          {"city": "Shanghai", "latitude": 31.2304, "longitude": 121.4737, "capital_raised": 130.3},
-          {"city": "Los Angeles", "latitude": 34.0522, "longitude": -118.2437, "capital_raised": 144.6},
-          {"city": "London", "latitude": 51.5074, "longitude": -0.1278, "capital_raised": 120.5},
-          {"city": "Bangalore", "latitude": 12.9716, "longitude": 77.5946, "capital_raised": 102.1},
-          {"city": "Tel Aviv", "latitude": 32.0853, "longitude": 34.7818, "capital_raised": 95.3},
-          {"city": "Paris", "latitude": 48.8566, "longitude": 2.3522, "capital_raised": 85.4},
-          {"city": "Singapore", "latitude": 1.3521, "longitude": 103.8198, "capital_raised": 83.9},
-          {"city": "Berlin", "latitude": 52.5200, "longitude": 13.4050, "capital_raised": 79.6},
-          {"city": "Tokyo", "latitude": 35.6895, "longitude": 139.6917, "capital_raised": 76.2},
-          {"city": "Sydney", "latitude": -33.8688, "longitude": 151.2093, "capital_raised": 72.3},
-          {"city": "Stockholm", "latitude": 59.3293, "longitude": 18.0686, "capital_raised": 69.7},
-          {"city": "Toronto", "latitude": 43.6511, "longitude": -79.3837, "capital_raised": 68.4},
-          {"city": "Amsterdam", "latitude": 52.3676, "longitude": 4.9041, "capital_raised": 66.8},
-          {"city": "Dubai", "latitude": 25.2048, "longitude": 55.2708, "capital_raised": 63.2},
-          {"city": "Dublin", "latitude": 53.3498, "longitude": -6.2603, "capital_raised": 62.1},
-          {"city": "Hong Kong", "latitude": 22.3193, "longitude": 114.1694, "capital_raised": 60.4},
-          {"city": "Seoul", "latitude": 37.5665, "longitude": 126.9780, "capital_raised": 58.3}
+          {"city": "San Francisco", "latitude": 37.7749, "longitude": -122.4194, "development_score": 89.5, "capital_raised": 427.6, "growth_score": 28.2, "deal_count": 19898, "exit_value": 766.3},
+          {"city": "New York", "latitude": 40.7128, "longitude": -74.0060, "development_score": 76.0, "capital_raised": 179.9, "growth_score": 41.5, "deal_count": 13594, "exit_value": 171.7},
+          {"city": "Beijing", "latitude": 39.9042, "longitude": 116.4074, "development_score": 75.6, "capital_raised": 161.2, "growth_score": 15.4, "deal_count": 8835, "exit_value": 279.2},
+          {"city": "Shanghai", "latitude": 31.2304, "longitude": 121.4737, "development_score": 72.9, "capital_raised": 130.3, "growth_score": 26.5, "deal_count": 7422, "exit_value": 186.8},
+          {"city": "Los Angeles", "latitude": 34.0522, "longitude": -118.2437, "development_score": 71.4, "capital_raised": 144.6, "growth_score": 39.9, "deal_count": 9781, "exit_value": 181.4},
+          {"city": "London", "latitude": 51.5074, "longitude": -0.1278, "development_score": 70.0, "capital_raised": 120.5, "growth_score": 32.1, "deal_count": 7654, "exit_value": 150.7},
+          {"city": "Bangalore", "latitude": 12.9716, "longitude": 77.5946, "development_score": 68.3, "capital_raised": 102.1, "growth_score": 29.7, "deal_count": 6543, "exit_value": 120.3},
+          {"city": "Tel Aviv", "latitude": 32.0853, "longitude": 34.7818, "development_score": 67.8, "capital_raised": 95.3, "growth_score": 25.8, "deal_count": 5432, "exit_value": 110.6},
+          {"city": "Paris", "latitude": 48.8566, "longitude": 2.3522, "development_score": 66.9, "capital_raised": 85.4, "growth_score": 30.2, "deal_count": 4987, "exit_value": 105.4},
+          {"city": "Singapore", "latitude": 1.3521, "longitude": 103.8198, "development_score": 65.5, "capital_raised": 83.9, "growth_score": 27.5, "deal_count": 4765, "exit_value": 100.9},
+          {"city": "Berlin", "latitude": 52.5200, "longitude": 13.4050, "development_score": 64.2, "capital_raised": 79.6, "growth_score": 28.7, "deal_count": 4321, "exit_value": 98.7},
+          {"city": "Tokyo", "latitude": 35.6895, "longitude": 139.6917, "development_score": 63.8, "capital_raised": 76.2, "growth_score": 26.9, "deal_count": 4210, "exit_value": 95.2},
+          {"city": "Sydney", "latitude": -33.8688, "longitude": 151.2093, "development_score": 63.1, "capital_raised": 72.3, "growth_score": 24.8, "deal_count": 3987, "exit_value": 92.3},
+          {"city": "Stockholm", "latitude": 59.3293, "longitude": 18.0686, "development_score": 62.7, "capital_raised": 69.7, "growth_score": 25.6, "deal_count": 3876, "exit_value": 89.4},
+          {"city": "Toronto", "latitude": 43.6511, "longitude": -79.3837, "development_score": 62.3, "capital_raised": 68.4, "growth_score": 24.5, "deal_count": 3654, "exit_value": 87.6},
+          {"city": "Amsterdam", "latitude": 52.3676, "longitude": 4.9041, "development_score": 61.9, "capital_raised": 66.8, "growth_score": 23.7, "deal_count": 3543, "exit_value": 85.4},
+          {"city": "Dubai", "latitude": 25.2048, "longitude": 55.2708, "development_score": 61.4, "capital_raised": 63.2, "growth_score": 22.9, "deal_count": 3321, "exit_value": 82.7},
+          {"city": "Dublin", "latitude": 53.3498, "longitude": -6.2603, "development_score": 61.1, "capital_raised": 62.1, "growth_score": 21.8, "deal_count": 3210, "exit_value": 81.5},
+          {"city": "Hong Kong", "latitude": 22.3193, "longitude": 114.1694, "development_score": 60.7, "capital_raised": 60.4, "growth_score": 20.9, "deal_count": 3109, "exit_value": 80.1},
+          {"city": "Seoul", "latitude": 37.5665, "longitude": 126.9780, "development_score": 60.3, "capital_raised": 58.3, "growth_score": 19.7, "deal_count": 2987, "exit_value": 78.4}
         ]
       },
       "mark": "circle",
@@ -67,13 +62,17 @@
           "type": "quantitative"
         },
         "size": {
-          "field": "capital_raised",
+          "field": "development_score",
           "type": "quantitative",
-          "title": "Capital Raised (in millions)"
+          "title": "Development Score"
         },
         "tooltip": [
-          {"field": "city", "type": "nominal"},
-          {"field": "capital_raised", "type": "quantitative", "title": "Capital Raised (in millions)"}
+          {"field": "city", "type": "nominal", "title": "City"},
+          {"field": "development_score", "type": "quantitative", "title": "Development Score"},
+          {"field": "capital_raised", "type": "quantitative", "title": "Capital Raised (in millions)"},
+          {"field": "growth_score", "type": "quantitative", "title": "Growth Score"},
+          {"field": "deal_count", "type": "quantitative", "title": "Deal Count"},
+          {"field": "exit_value", "type": "quantitative", "title": "Exit Value"}
         ]
       }
     }
