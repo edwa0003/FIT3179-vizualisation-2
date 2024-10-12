@@ -19,12 +19,12 @@
           }
         },
         "key": "Country Code",
-        "fields": ["Country/Economy", "Agricultural (%)", "Industrial (%)", "Service (%)", "Agricultural (US$MM)", "Industrial (US$MM)", "Service (US$MM)"]
+        "fields": ["Country", "Agricultural (%)", "Industrial (%)", "Service (%)", "Agricultural (US$MM)", "Industrial (US$MM)", "Service (US$MM)"]
       },
       "default": null
     },
     {
-      "filter": "datum['Agricultural (%)'] != null"
+      "filter": "datum['Agricultural (%)'] != null && datum['Agricultural (%)'] > 0"
     }
   ],
   "params": [
@@ -57,12 +57,14 @@
       "field": "Agricultural (%)",
       "type": "quantitative",
       "scale": {
+        "type": "log",
+        "domain": [1, 100],
         "scheme": "greens"
       },
       "title": "Agricultural (%) of PPP"
     },
     "tooltip": [
-      {"field": "Country/Economy", "type": "nominal", "title": "Country"},
+      {"field": "Country", "type": "nominal", "title": "Country"},
       {"field": "Agricultural (%)", "type": "quantitative", "title": "Agricultural (%)"},
       {"field": "Agricultural (US$MM)", "type": "quantitative", "title": "Agricultural (US$MM)"},
       {"field": "Industrial (%)", "type": "quantitative", "title": "Industrial (%)"},
@@ -72,7 +74,7 @@
     ]
   },
   "projection": {
-    "type": "mercator"
+    "type": "equalEarth"
   },
   "width": 800,
   "height": 500
