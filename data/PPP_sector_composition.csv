@@ -1,4 +1,4 @@
-Country/Economy,Total GDP (US$MM),Agricultural,Industrial,Service,Agricultural (US$MM),Industrial (US$MM),Service (US$MM),country-code
+Country/Economy,Total GDP (US$MM),Agricultural (%),Industrial (%),Service (%),Agricultural (US$MM),Industrial (US$MM),Service (US$MM),country-code
 China,23210000,7.9,40.5,51.6,1833590,9400050,11976360,156
 European Union,20850111,1.6,25.1,70.9,333600,5233350,14782650,
 United States of America,19490000,0.9,19.1,80.0,175410,3722590,15592000,840
