@@ -24,7 +24,7 @@
       "default": null
     },
     {
-      "filter": "datum['Agricultural (%)'] != null && datum['Agricultural (%)'] > 0"
+      "filter": "datum['Agricultural (%)'] != null && datum['Agricultural (%)'] >= agriPercentFilter && datum['Agricultural (US$MM)'] >= agriUsdFilter"
     }
   ],
   "params": [
@@ -34,7 +34,7 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 100,
+        "max": 65,
         "step": 1,
         "name": "Minimum Agricultural (%)"
       }
@@ -45,7 +45,7 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 5000000,
+        "max": 2000000,
         "step": 100000,
         "name": "Minimum Agricultural (US$MM)"
       }
@@ -58,10 +58,17 @@
       "type": "quantitative",
       "scale": {
         "type": "log",
-        "domain": [1, 100],
+        "domain": [1, 65],
         "scheme": "greens"
       },
       "title": "Agricultural (%) of PPP"
+    },
+    "opacity": {
+      "condition": {
+        "test": "datum['Agricultural (%)'] >= agriPercentFilter && datum['Agricultural (US$MM)'] >= agriUsdFilter",
+        "value": 1
+      },
+      "value": 0.2
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country"},
