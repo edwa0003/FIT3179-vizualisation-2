@@ -15,7 +15,7 @@
             "lookup": "id",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/service_percentage_and_median_income.csv",
+                "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/countries_median_income.csv",
                 "format": {
                   "type": "csv"
                 }
