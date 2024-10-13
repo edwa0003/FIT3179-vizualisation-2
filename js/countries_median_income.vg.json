@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Choropleth map of countries shaded based on their Daily Median Income.",
+    "data": {
+      "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+      "format": {
+        "type": "topojson",
+        "feature": "countries"
+      }
+    },
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/service_percentage_and_median_income.csv",
+            "format": {
+              "type": "csv"
+            }
+          },
+          "key": "Country Code",
+          "fields": ["Country", "Daily Median Income"]
+        },
+        "default": null
+      }
+    ],
+    "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "strokeWidth": 0.5
+    },
+    "encoding": {
+      "color": {
+        "field": "Daily Median Income",
+        "type": "quantitative",
+        "scale": {
+          "type": "log",
+          "scheme": "blues",
+          "nullValue": "lightgray"
+        },
+        "title": "Daily Median Income"
+      },
+      "opacity": {
+        "condition": {"test": "isValid(datum['Daily Median Income'])", "value": 1},
+        "value": 0.3
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "Daily Median Income", "type": "quantitative", "title": "Daily Median Income"}
+      ]
+    },
+    "projection": {
+      "type": "equalEarth"
+    },
+    "width": 800,
+    "height": 500
+  }
+  
