@@ -78,7 +78,7 @@
         },
         "encoding": {
           "tooltip": {
-            "value": {"signal": "'Data is not available in ' + datum['Country']"}
+            "value": {"signal": "'Data is not available'"}
           }
         }
       }
