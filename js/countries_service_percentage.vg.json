@@ -73,12 +73,9 @@
       },
       "tooltip": [
         {"field": "Country", "type": "nominal", "title": "Country"},
-        {"field": "Agricultural (%)", "type": "quantitative", "title": "Agricultural (%)"},
-        {"field": "Agricultural (US$MM)", "type": "quantitative", "title": "Agricultural (US$MM)"},
-        {"field": "Industrial (%)", "type": "quantitative", "title": "Industrial (%)"},
-        {"field": "Industrial (US$MM)", "type": "quantitative", "title": "Industrial (US$MM)"},
         {"field": "Service (%)", "type": "quantitative", "title": "Service (%)"},
-        {"field": "Service (US$MM)", "type": "quantitative", "title": "Service (US$MM)"}
+        {"field": "Service (US$MM)", "type": "quantitative", "title": "Service (US$MM)"},
+        {"field": "Daily Median Income (USD)", "type": "quantitative", "title": "Daily Median Income (USD)"}
       ]
     },
     "projection": {
