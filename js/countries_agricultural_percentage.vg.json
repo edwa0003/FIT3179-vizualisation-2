@@ -34,7 +34,7 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 65,
+        "max": 61,
         "step": 1,
         "name": "Minimum Agricultural (%)"
       }
@@ -45,7 +45,7 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 2000000,
+        "max": 1900000,
         "step": 100000,
         "name": "Minimum Agricultural (US$MM)"
       }
@@ -58,7 +58,7 @@
       "type": "quantitative",
       "scale": {
         "type": "log",
-        "domain": [1, 65],
+        "domain": [1, 61],
         "scheme": "greens"
       },
       "title": "Agricultural (%) of PPP"
