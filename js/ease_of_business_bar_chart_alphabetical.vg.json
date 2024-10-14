@@ -3,6 +3,18 @@
   "data": {
     "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/ease_of_business_ranking.csv"
   },
+  "params": [
+    {
+      "name": "page",
+      "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 9, "step": 1}
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum['Global rank'] > page * 20 && datum['Global rank'] <= (page + 1) * 20"
+    }
+  ],
   "mark": {
     "type": "bar",
     "tooltip": true
