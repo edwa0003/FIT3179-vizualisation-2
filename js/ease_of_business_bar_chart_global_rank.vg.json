@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Ease of bsuiness bar chart (ranked ascending)",
   "width": 600,
   "height": 500,
   "data": {
