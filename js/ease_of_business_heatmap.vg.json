@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/ease_of_business_ranking.csv"
+    },
+    "transform": [
+      {
+        "window": [{"op": "rank", "as": "rank"}],
+        "sort": [{"field": "Global rank", "order": "ascending"}]
+      },
+      {
+        "filter": "datum.rank > page * 20 && datum.rank <= (page + 1) * 20"
+      }
+    ],
+    "params": [
+      {
+        "name": "page",
+        "value": 0,
+        "bind": {"input": "range", "min": 0, "max": 11, "step": 1}
+      }
+    ],
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "Economy",
+        "type": "nominal",
+        "sort": "ascending",
+        "title": "Country"
+      },
+      "y": {
+        "field": "Global rank",
+        "type": "ordinal",
+        "title": "Rank"
+      },
+      "color": {
+        "field": "Global rank",
+        "type": "quantitative",
+        "title": "Global Rank",
+        "scale": {"scheme": "blues"}
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {"domainWidth": 1}
+    }
+  }
