@@ -93,32 +93,110 @@
     "center": { "expr": "center_to" },
     "scale": { "expr": "zoom_level" }
   },
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "Service (%)",
-      "type": "quantitative",
-      "scale": {
-        "type": "symlog",
-        "constant": 1,
-        "domain": [28, 100],
-        "scheme": "purples"
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
       },
-      "title": "Service (%) of PPP"
-    },
-    "opacity": {
-      "condition": {
-        "test": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
-        "value": 1
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
       },
-      "value": 0.2
+      "encoding": {
+        "tooltip": {
+          "value": "Data is not available"
+        }
+      }
     },
-    "tooltip": [
-      {"field": "Country", "type": "nominal", "title": "Country"},
-      {"field": "Service (%)", "type": "quantitative", "title": "Service (%)"},
-      {"field": "Service (US$MM)", "type": "quantitative", "title": "Service (US$MM)"}
-    ]
-  },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/service_percentage_and_median_income.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Country Code",
+          "from": {
+            "data": {
+              "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+              "format": {
+                "type": "topojson",
+                "feature": "countries"
+              }
+            },
+            "key": "id"
+          },
+          "as": "geo"
+        },
+        {
+          "calculate": "isValid(datum['Service (%)']) ? datum['Service (%)'] : null",
+          "as": "service_percent"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#fff",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "condition": {
+            "test": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
+            "field": "service_percent",
+            "type": "quantitative",
+            "scale": {
+              "type": "symlog",
+              "constant": 1,
+              "domain": [28, 100],
+              "scheme": "purples"
+            }
+          },
+          "value": "#666"
+        },
+        "legend": {
+          "title": "Service (%) of PPP"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
+            "value": 1
+          },
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "service_percent",
+            "type": "quantitative",
+            "title": "Service (%)",
+            "format": ".2f",
+            "condition": {
+              "test": "isValid(datum['service_percent'])",
+              "value": "Data not available"
+            }
+          },
+          {
+            "field": "Service (US$MM)",
+            "type": "quantitative",
+            "title": "Service (US$MM)"
+          }
+        ]
+      }
+    }
+  ],
   "width": 800,
   "height": 500
 }
