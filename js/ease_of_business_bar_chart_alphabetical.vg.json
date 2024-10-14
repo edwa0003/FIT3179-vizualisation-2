@@ -3,22 +3,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/ease_of_business_ranking.csv"
   },
-  "transform": [
-    {
-      "window": [{"op": "rank", "as": "rank"}],
-      "sort": [{"field": "Economy", "order": "ascending"}]
-    },
-    {
-      "filter": "datum.rank > page * 20 && datum.rank <= (page + 1) * 20"
-    }
-  ],
-  "params": [
-    {
-      "name": "page",
-      "value": 0,
-      "bind": {"input": "range", "min": 0, "max": 9, "step": 1}
-    }
-  ],
   "mark": {
     "type": "bar",
     "tooltip": true
@@ -27,7 +11,10 @@
     "y": {
       "field": "Economy",
       "type": "nominal",
-      "sort": "ascending",
+      "sort": {
+        "field": "Global rank",
+        "order": "ascending"
+      },
       "title": "Country"
     },
     "x": {
