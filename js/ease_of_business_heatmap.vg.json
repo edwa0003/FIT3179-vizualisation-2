@@ -6,7 +6,7 @@
     "transform": [
       {
         "window": [{"op": "rank", "as": "rank"}],
-        "sort": [{"field": "Global rank", "order": "ascending"}]
+        "sort": [{"field": "Economy", "order": "ascending"}]
       },
       {
         "filter": "datum.rank > page * 20 && datum.rank <= (page + 1) * 20"
@@ -16,28 +16,39 @@
       {
         "name": "page",
         "value": 0,
-        "bind": {"input": "range", "min": 0, "max": 11, "step": 1}
+        "bind": {"input": "range", "min": 0, "max": 9, "step": 1}
       }
     ],
-    "mark": "rect",
+    "mark": {
+      "type": "bar",
+      "tooltip": true
+    },
     "encoding": {
-      "x": {
+      "y": {
         "field": "Economy",
         "type": "nominal",
         "sort": "ascending",
         "title": "Country"
       },
-      "y": {
-        "field": "Global rank",
-        "type": "ordinal",
-        "title": "Rank"
-      },
-      "color": {
+      "x": {
         "field": "Global rank",
         "type": "quantitative",
-        "title": "Global Rank",
-        "scale": {"scheme": "blues"}
-      }
+        "title": "Global Rank"
+      },
+      "tooltip": [
+        {"field": "Economy", "type": "nominal"},
+        {"field": "Global rank", "type": "quantitative"},
+        {"field": "Starting a business", "type": "quantitative"},
+        {"field": "Dealing with construction permits", "type": "quantitative"},
+        {"field": "Getting electricity", "type": "quantitative"},
+        {"field": "Registering property", "type": "quantitative"},
+        {"field": "Getting credit", "type": "quantitative"},
+        {"field": "Protecting minority investors", "type": "quantitative"},
+        {"field": "Paying taxes", "type": "quantitative"},
+        {"field": "Trading across borders", "type": "quantitative"},
+        {"field": "Enforcing contracts", "type": "quantitative"},
+        {"field": "Resolving insolvency", "type": "quantitative"}
+      ]
     },
     "config": {
       "view": {"stroke": "transparent"},
