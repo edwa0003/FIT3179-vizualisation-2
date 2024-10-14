@@ -49,8 +49,50 @@
         "step": 100000,
         "name": "Minimum Service (US$MM)"
       }
+    },
+    {
+      "name": "zoom_level",
+      "value": 300,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 1000,
+        "step": 50,
+        "name": "Zoom Level: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [50, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [50, 0],
+          [-61.0242, 14.6415],
+          [-63.5887, -16.2902],
+          [2.2137, 46.6034],
+          [21.0059, 44.0165],
+          [0.8248, 8.6195],
+          [32.2903, 1.3733],
+          [24.6849, -22.3285],
+          [51.1839, 25.3548],
+          [64.5853, 41.3775],
+          [104.1954, 35.8617],
+          [103.8198, 1.3521],
+          [179.194, -7.1095]
+        ],
+        "labels": [
+          "World", "Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
+        ],
+        "name": "Focus Point: "
+      }
     }
   ],
+  "projection": {
+    "type": "equalEarth",
+    "center": { "expr": "center_to" },
+    "scale": { "expr": "zoom_level" }
+  },
   "mark": "geoshape",
   "encoding": {
     "color": {
@@ -76,9 +118,6 @@
       {"field": "Service (%)", "type": "quantitative", "title": "Service (%)"},
       {"field": "Service (US$MM)", "type": "quantitative", "title": "Service (US$MM)"}
     ]
-  },
-  "projection": {
-    "type": "equalEarth"
   },
   "width": 800,
   "height": 500

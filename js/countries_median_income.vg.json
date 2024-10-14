@@ -22,10 +22,11 @@
     },
     {
       "name": "center_to",
-      "value": [0, 0],
+      "value": [50, 0],
       "bind": {
         "input": "select",
         "options": [
+          [50, 0],
           [-61.0242, 14.6415],
           [-63.5887, -16.2902],
           [2.2137, 46.6034],
@@ -40,7 +41,7 @@
           [179.194, -7.1095]
         ],
         "labels": [
-          "Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
+          "World","Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
         ],
         "name": "Focus Point: "
       }
