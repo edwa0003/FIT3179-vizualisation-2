@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Service Sector Role in Economy (2023)",
   "description": "Choropleth map of countries shaded based on their Service (%) and Service (US$MM) of PPP.",
   "width": 800,
   "height": 500,

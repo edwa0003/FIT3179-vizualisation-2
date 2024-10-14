@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Daily Median Income by Country",
+  "title": "Daily Median Income by Country (2023)",
   "width": 800,
   "height": 500,
   "projection": {
@@ -137,7 +137,7 @@
           {
             "field": "daily_median_income",
             "type": "quantitative",
-            "title": "Daily Median Income",
+            "title": "Daily Median Income (USD)",
             "format": ".2f"
           }
         ]
