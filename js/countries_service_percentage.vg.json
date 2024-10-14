@@ -58,7 +58,19 @@
           [179.194, -7.1095]
         ],
         "labels": [
-          "World", "Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
+          "World",
+          "Martinique",
+          "Bolivia",
+          "France",
+          "Serbia",
+          "Togo",
+          "Uganda",
+          "Botswana",
+          "Qatar",
+          "Uzbekistan",
+          "China",
+          "Singapore",
+          "Tuvalu"
         ],
         "name": "Focus Point: "
       }
@@ -109,11 +121,12 @@
           "as": "geo"
         },
         {
-          "filter": "isValid(datum['Service (%)']) && datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter"
-        },
-        {
           "calculate": "datum['Service (%)']",
           "as": "service_percent"
+        },
+        {
+          "calculate": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
+          "as": "passedFilter"
         }
       ],
       "mark": {
@@ -127,6 +140,10 @@
           "type": "geojson"
         },
         "color": {
+          "condition": {
+            "test": "datum.passedFilter == false",
+            "value": "darkgray"
+          },
           "field": "service_percent",
           "type": "quantitative",
           "scale": {
@@ -139,15 +156,8 @@
             "title": "Service (%) of PPP"
           }
         },
-        "opacity": {
-          "value": 1
-        },
         "tooltip": [
-          {
-            "field": "Country",
-            "type": "nominal",
-            "title": "Country"
-          },
+          {"field": "Country", "type": "nominal", "title": "Country"},
           {
             "field": "service_percent",
             "type": "quantitative",

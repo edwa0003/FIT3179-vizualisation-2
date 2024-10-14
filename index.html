@@ -12,14 +12,21 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        .content-section {
+            padding-left: 1.5in;
+            padding-right: 1.5in;
+        }
+        .my {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Header -->
     <div class="w3-top">
         <div class="w3-row w3-padding w3-blue" style="font-family: 'Roboto', sans-serif; font-size: 18px">
-            <div class="w3-col s2">
-                <a href="#home" class="w3-button w3-block w3-blue">HOME</a>
-            </div>
             <div class="w3-col s2">
                 <a href="#why" class="w3-button w3-block w3-blue">WHY</a>
             </div>
@@ -42,7 +49,7 @@
     </div>
 
     <!-- Title Section -->
-    <div id="home" class="center-align-title" style="padding-top:60px;">
+    <div id="home" class="content-section" style="padding-top:60px;">
         <h1 class="title">
             Best Country to Create a Startup
         </h1>
@@ -53,7 +60,7 @@
         <h2 class="subtitle">
             Why Create a Startup Outside of Your Home Country
         </h2>
-        <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <p>
             Starting a startup in a foreign country can offer numerous advantages. These may include access to larger or more receptive markets, favorable regulatory environments, better funding opportunities, exposure to new ideas and technologies, and potential tax benefits. Additionally, some countries offer special visas or incentives to attract foreign entrepreneurs, fostering an ecosystem that supports innovation and growth.
         </p>
     </div>
@@ -63,7 +70,7 @@
         <h2 class="subtitle">
             Success Stories of Startups Created on Entrepreneur Visas
         </h2>
-        <ul style="padding-left: 25%; padding-right: 25%; text-align: justify; list-style-type: disc;">
+        <ul style="list-style-type: disc;">
             <li>
                 <strong>TransferWise (now Wise):</strong> Founded by Estonian entrepreneurs Kristo Käärmann and Taavet Hinrikus in the UK, TransferWise revolutionized international money transfers. They utilized the UK's Tier 1 Entrepreneur Visa to build a fintech unicorn offering low-cost, transparent currency exchange services.
             </li>
@@ -87,8 +94,8 @@
         <h2 class="subtitle">
             Top Startup Ecosystems Around the World
         </h2>
-        <div id="startup-ecosystems-map" style="padding-left: 2.7%; text-align: center;"></div>
-        <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="startup-ecosystems-map"></div>
+        <p>
             The global startup ecosystem map highlights cities and regions renowned for fostering innovation and entrepreneurship. Key hubs like Silicon Valley, London, Beijing, and Bangalore offer robust support systems, including access to venture capital, talent pools, and supportive policies. These ecosystems attract entrepreneurs worldwide seeking opportunities to scale their startups in dynamic markets.
         </p>
     </div>
@@ -99,20 +106,20 @@
             Ease of Doing Business Index by Country
         </h2>
         <div class="tab shadow">
-            <button class="tablinks" onclick="openTab(event, 'EaseRank')" id="defaultOpen">By Global Rank</button>
-            <button class="tablinks" onclick="openTab(event, 'EaseAlpha')">Alphabetically</button>
+            <button class="tablinks1" onclick="openTab(event, 'EaseRank', 'tabcontent1', 'tablinks1')" id="defaultOpen">By Global Rank</button>
+            <button class="tablinks1" onclick="openTab(event, 'EaseAlpha', 'tabcontent1', 'tablinks1')">Alphabetically</button>
         </div>
-        <div id="EaseRank" class="tabcontent shadow">
-            <div id="ease-business-rank-chart" style="padding-left: 2.7%;"></div>
-            <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="EaseRank" class="tabcontent1 shadow">
+            <div id="ease-business-rank-chart"></div>
+            <p>
                 Countries ranked at the top of the Ease of Doing Business Index offer regulatory environments conducive to starting and operating a business. High-ranking countries often have streamlined processes for business registration, favorable tax regimes, strong legal protections, and efficient resolution of insolvency. Entrepreneurs may consider these countries for their startups due to the reduced bureaucratic hurdles and supportive infrastructures.
             </p>
         </div>
-        <div id="EaseAlpha" class="tabcontent shadow">
-            <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="EaseAlpha" class="tabcontent1 shadow">
+            <div id="ease-business-alpha-chart"></div>
+            <p>
                 Viewing the Ease of Doing Business Index alphabetically allows for easy lookup of specific countries and a comparison of their relative standings. This perspective helps entrepreneurs identify potential countries of interest and understand where they stand in terms of business friendliness compared to others.
             </p>
-            <div id="ease-business-alpha-chart" style="padding-left: 2.7%;"></div>
         </div>
     </div>
 
@@ -121,8 +128,8 @@
         <h2 class="subtitle">
             Economic Indicators of Countries
         </h2>
-        <div id="economy-bubble-chart" style="padding-left: 2.7%;"></div>
-        <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="economy-bubble-chart"></div>
+        <p>
             This bubble chart visualizes countries based on Purchasing Power Parity (PPP), PPP per capita, population, and region over time. The size and position of the bubbles represent economic size and wealth, while the color indicates the region. Filtering by region allows entrepreneurs to focus on specific areas of interest. Understanding these economic indicators is crucial when considering market potential, consumer purchasing power, and overall economic health of a country.
         </p>
     </div>
@@ -133,20 +140,20 @@
             Income Levels and Service Sector Contribution
         </h2>
         <div class="tab shadow">
-            <button class="tablinks" onclick="openTab(event, 'MedianIncome')" id="defaultOpen2">Median Income Map</button>
-            <button class="tablinks" onclick="openTab(event, 'ServiceSector')">Service Sector Percentage Map</button>
+            <button class="tablinks2" onclick="openTab(event, 'MedianIncome', 'tabcontent2', 'tablinks2')" id="defaultOpen2">Median Income Map</button>
+            <button class="tablinks2" onclick="openTab(event, 'ServiceSector', 'tabcontent2', 'tablinks2')">Service Sector Percentage Map</button>
         </div>
-        <div id="MedianIncome" class="tabcontent shadow">
-            <div id="median-income-map" style="padding-left: 2.7%;"></div>
-            <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="MedianIncome" class="tabcontent2 shadow">
+            <div id="median-income-map"></div>
+            <p>
                 The choropleth map of median income by country provides insight into the average income levels of populations worldwide. Higher median incomes can indicate greater consumer spending power, which may be attractive for startups targeting affluent markets. Entrepreneurs can use this information to assess potential markets for their products or services.
             </p>
         </div>
-        <div id="ServiceSector" class="tabcontent shadow">
-            <p style="padding-left: 20%; padding-right: 20%; text-align: justify;">
+        <div id="ServiceSector" class="tabcontent2 shadow">
+            <div id="service-sector-map"></div>
+            <p>
                 The service sector percentage map illustrates the proportion of a country's economy derived from services. A higher percentage suggests a mature economy with opportunities in sectors like technology, finance, and professional services. Startups in these fields may find more developed infrastructure and customer bases in such countries.
             </p>
-            <div id="service-sector-map" style="padding-left: 2.7%;"></div>
         </div>
     </div>
 
@@ -188,16 +195,16 @@
 
     <!-- Tab Functionality Script -->
     <script>
-        function openTab(evt, tabName) {
+        function openTab(evt, tabName, tabContentClass, tabLinksClass) {
             var i, tabcontent, tablinks;
-            // Hide all tab contents
-            tabcontent = document.getElementsByClassName("tabcontent");
+            // Hide all tab contents in the current group
+            tabcontent = document.getElementsByClassName(tabContentClass);
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-            // Remove "active" class from all tab links
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; tablinks.length > i; i++) {
+            // Remove "active" class from all tab links in the current group
+            tablinks = document.getElementsByClassName(tabLinksClass);
+            for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             // Show the current tab content
