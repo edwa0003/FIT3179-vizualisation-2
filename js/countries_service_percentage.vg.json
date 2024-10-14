@@ -1,32 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Choropleth map of countries shaded based on their Service (%) and Service (US$MM) of PPP.",
-  "data": {
-    "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
-    "format": {
-      "type": "topojson",
-      "feature": "countries"
-    }
-  },
-  "transform": [
-    {
-      "lookup": "id",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/service_percentage_and_median_income.csv",
-          "format": {
-            "type": "csv"
-          }
-        },
-        "key": "Country Code",
-        "fields": ["Country", "Service (%)", "Service (US$MM)", "Daily Median Income"]
-      },
-      "default": null
-    },
-    {
-      "filter": "datum['Service (%)'] != null && datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter"
-    }
-  ],
+  "width": 800,
+  "height": 500,
   "params": [
     {
       "name": "servicePercentFilter",
@@ -90,8 +66,8 @@
   ],
   "projection": {
     "type": "equalEarth",
-    "center": { "expr": "center_to" },
-    "scale": { "expr": "zoom_level" }
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
   },
   "layer": [
     {
@@ -109,14 +85,13 @@
         "strokeWidth": 1
       },
       "encoding": {
-        "tooltip": {
-          "value": "Data is not available"
-        }
+        "tooltip": {"value": "Data not available"}
       }
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/service_percentage_and_median_income.csv"
+        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/main/data/service_percentage_and_median_income.csv",
+        "format": {"type": "csv"}
       },
       "transform": [
         {
@@ -134,7 +109,10 @@
           "as": "geo"
         },
         {
-          "calculate": "isValid(datum['Service (%)']) ? datum['Service (%)'] : null",
+          "filter": "isValid(datum['Service (%)']) && datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter"
+        },
+        {
+          "calculate": "datum['Service (%)']",
           "as": "service_percent"
         }
       ],
@@ -149,28 +127,20 @@
           "type": "geojson"
         },
         "color": {
-          "condition": {
-            "test": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
-            "field": "service_percent",
-            "type": "quantitative",
-            "scale": {
-              "type": "symlog",
-              "constant": 1,
-              "domain": [28, 100],
-              "scheme": "purples"
-            }
+          "field": "service_percent",
+          "type": "quantitative",
+          "scale": {
+            "type": "symlog",
+            "constant": 1,
+            "domain": [28, 100],
+            "scheme": "purples"
           },
-          "value": "#666"
-        },
-        "legend": {
-          "title": "Service (%) of PPP"
+          "legend": {
+            "title": "Service (%) of PPP"
+          }
         },
         "opacity": {
-          "condition": {
-            "test": "datum['Service (%)'] >= servicePercentFilter && datum['Service (US$MM)'] >= serviceUsdFilter",
-            "value": 1
-          },
-          "value": 0.2
+          "value": 1
         },
         "tooltip": [
           {
@@ -182,11 +152,7 @@
             "field": "service_percent",
             "type": "quantitative",
             "title": "Service (%)",
-            "format": ".2f",
-            "condition": {
-              "test": "isValid(datum['service_percent'])",
-              "value": "Data not available"
-            }
+            "format": ".2f"
           },
           {
             "field": "Service (US$MM)",
@@ -196,7 +162,5 @@
         ]
       }
     }
-  ],
-  "width": 800,
-  "height": 500
+  ]
 }
