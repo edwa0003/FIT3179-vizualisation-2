@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global Startup Ecosystem Ranking Map",
-  "width": 400,
-  "height": 400,
+  "width": 800,
+  "height": 500,
   "params": [
     {
       "name": "zoom_level",

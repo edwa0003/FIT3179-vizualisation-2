@@ -45,6 +45,17 @@
         ],
         "name": "Focus Point: "
       }
+    },
+    {
+      "name": "income_filter",
+      "value": 50,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 75,
+        "step": 1,
+        "name": "Income Filter (larger than): "
+      }
     }
   ],
   "layer": [
@@ -103,6 +114,10 @@
           "type": "geojson"
         },
         "color": {
+          "condition": {
+            "test": "datum.daily_median_income > income_filter",
+            "value": "darkgray"
+          },
           "field": "daily_median_income",
           "type": "quantitative",
           "scale": {
