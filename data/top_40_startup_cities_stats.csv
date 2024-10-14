@@ -1,0 +1,41 @@
+Rank,Ecosystems,Region,Performance,Funding,Connectedness,Market Reach,Talent,Knowledge,Latitude,Longitude,Improvement from GSER 2022
+1,Silicon Valley,North America,10,10,10,10,10,10,37.3875,-122.0575,0
+2,New York City,North America,10,10,10,9,9,6,40.7128,-74.006,0
+2,London,Europe,10,9,10,10,9,7,51.5074,-0.1278,0
+4,Los Angeles,North America,10,8,9,9,7,5,34.0522,-118.2437,2
+5,Tel Aviv,MENA,9,10,9,10,9,6,32.0853,34.7818,2
+6,Boston,North America,8,9,8,7,9,7,42.3601,-71.0589,0
+7,Beijing,Asia,8,9,8,10,8,9,39.9042,116.4074,0
+8,Singapore,Asia,7,10,8,10,7,4,1.3521,103.8198,10
+9,Shanghai,Asia,3,8,7,9,9,7,31.2304,121.4737,0
+10,Seattle,North America,8,8,8,10,9,6,47.6062,-122.3321,0
+11,"Washington, D.C.",North America,8,9,9,3,7,3,38.8951,-77.0364,0
+12,Seoul,Asia,7,8,7,6,7,6,37.5665,126.978,0
+13,Berlin,Europe,6,9,10,5,3,6,52.52,13.405,3
+14,Amsterdam-Delta,Europe,6,7,8,7,7,5,52.3676,4.9041,0
+15,Tokyo,Asia,4,10,9,4,3,3,35.6895,139.6917,0
+16,San Diego,North America,8,7,7,5,6,3,32.7157,-117.1611,0
+17,Toronto-Waterloo,North America,5,7,8,4,3,2,43.65107,-79.347015,0
+18,Paris,Europe,1,4,7,10,8,5,48.8566,2.3522,0
+19,Chicago,North America,7,7,6,7,6,3,41.8781,-87.6298,0
+20,Sydney,Oceania,3,5,7,6,6,6,-33.8688,151.2093,0
+20,Bengaluru-Karnataka,Asia,4,8,7,7,7,3,12.9716,77.5946,2
+22,Stockholm,Europe,5,8,6,3,7,3,59.3293,18.0686,0
+23,Miami,North America,8,8,7,7,6,3,25.7617,-80.1918,10
+24,Delhi,Asia,4,7,3,1,4,5,28.6139,77.209,2
+25,Austin,North America,6,6,6,3,7,2,30.2672,-97.7431,0
+26,São Paulo,Latin America,3,7,5,6,3,0,-23.5505,-46.6333,2
+27,Philadelphia,North America,3,7,5,6,4,2,39.9526,-75.1652,0
+28,Denver-Boulder,North America,3,5,8,7,4,0,39.7392,-104.9903,0
+29,Atlanta,North America,3,7,6,3,4,3,33.749,-84.388,2
+30,Vancouver,North America,3,6,6,4,7,2,49.2827,-123.1207,0
+31,Mumbai,Asia,6,3,3,3,7,0,19.076,72.8777,5
+31,Salt Lake-Provo,North America,3,5,6,8,5,0,40.7608,-111.891,0
+33,Melbourne,Oceania,5,5,3,5,6,0,-37.8136,144.9631,6
+34,Dallas,North America,3,3,4,3,2,0,32.7767,-96.797,0
+35,Shenzhen,Asia,1,3,10,1,2,7,22.5431,114.0579,0
+36,Zurich,Europe,3,3,7,10,6,0,47.3769,8.5417,10
+37,Munich,Europe,2,2,7,4,2,0,48.1351,11.582,0
+38,Hangzhou,Asia,4,8,10,1,6,0,30.2874,120.1536,0
+39,Greater Helsinki,Europe,3,1,1,1,1,0,60.1699,24.9384,0
+40,Montreal,North America,1,1,1,1,1,1,45.5017,-73.5673,0
