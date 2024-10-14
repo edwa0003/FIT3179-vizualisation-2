@@ -4,8 +4,48 @@
   "width": 800,
   "height": 500,
   "projection": {
-    "type": "equalEarth"
+    "type": "equalEarth",
+    "center": { "expr": "center_to" },
+    "scale": { "expr": "zoom_level" }
   },
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 300,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 1000,
+        "step": 50,
+        "name": "Zoom Level: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [0, 0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [-61.0242, 14.6415],
+          [-63.5887, -16.2902],
+          [2.2137, 46.6034],
+          [21.0059, 44.0165],
+          [0.8248, 8.6195],
+          [32.2903, 1.3733],
+          [24.6849, -22.3285],
+          [51.1839, 25.3548],
+          [64.5853, 41.3775],
+          [104.1954, 35.8617],
+          [103.8198, 1.3521],
+          [179.194, -7.1095]
+        ],
+        "labels": [
+          "Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
+        ],
+        "name": "Focus Point: "
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
