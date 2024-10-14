@@ -95,13 +95,53 @@
           "scale": {
             "type": "log",
             "domain": [1, 1000000],
-            "range": [10, 1000]     
+            "range": [10, 1000]
           },
           "legend": {"title": "Population (Thousands)", "format": ".1s"}
         },
         "color": {
           "field": "Region",
           "type": "nominal",
+          "scale": {
+            "domain": [
+              "Australia and New Zealand",
+              "Central Asia",
+              "Eastern Asia",
+              "Eastern Europe",
+              "Latin America and the Caribbean",
+              "Melanesia",
+              "Micronesia",
+              "Northern Africa",
+              "Northern America",
+              "Northern Europe",
+              "Polynesia",
+              "South-eastern Asia",
+              "Southern Asia",
+              "Southern Europe",
+              "Sub-Saharan Africa",
+              "Western Asia",
+              "Western Europe"
+            ],
+            "range": [
+              "#1F77B4",
+              "#FFBB78",
+              "#2CA02C",
+              "#5B8BBE",
+              "#7B3F00",
+              "#FF8C00",
+              "#17BECF",
+              "#A47CBB",
+              "#BCBD22",
+              "#006400",
+              "#8A2BE2",
+              "#FFA07A",
+              "#4682B4",
+              "#B5651D",
+              "#3E1A78",
+              "#000000",
+              "#808080"
+            ]
+          },
           "legend": {"title": "Region"}
         },
         "opacity": {"value": 0.6},
