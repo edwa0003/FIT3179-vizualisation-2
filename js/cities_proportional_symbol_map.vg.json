@@ -63,7 +63,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_50_startup_cities_stats.csv",
+        "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/top_40_startup_cities_stats.csv",
         "format": {"type": "csv"}
       },
       "mark": {
@@ -89,7 +89,8 @@
           {"field": "Connectedness", "type": "quantitative", "title": "Connectedness"},
           {"field": "Market Reach", "type": "quantitative", "title": "Market Reach"},
           {"field": "Talent", "type": "quantitative", "title": "Talent"},
-          {"field": "Knowledge", "type": "quantitative", "title": "Knowledge"}
+          {"field": "Knowledge", "type": "quantitative", "title": "Knowledge"},
+          {"field": "Improvement from GSER 2022", "type": "quantitative", "title": "Improvement from GSER 2022"}
         ]
       }
     }
