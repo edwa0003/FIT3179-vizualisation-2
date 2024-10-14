@@ -54,7 +54,7 @@
         "min": 0,
         "max": 75,
         "step": 1,
-        "name": "Income Filter (larger than): "
+        "name": "Income Filter:"
       }
     }
   ],
