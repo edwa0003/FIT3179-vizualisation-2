@@ -1,8 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Daily Median Income by Country",
-  "width": "container",
+  "width": 800,
   "height": 500,
+  "projection": {
+    "type": "equalEarth"
+  },
   "layer": [
     {
       "data": {
@@ -63,8 +66,7 @@
           "type": "quantitative",
           "scale": {
             "type": "log",
-            "scheme": "blues",
-            "nullValue": "#ddd"
+            "scheme": "blues"
           },
           "legend": {
             "title": "Daily Median Income (USD)"
