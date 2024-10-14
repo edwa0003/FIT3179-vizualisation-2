@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "data": {
+      "url": "https://raw.githubusercontent.com/edwa0003/FIT3179-vizualisation-2/refs/heads/main/data/ease_of_business_ranking.csv"
+    },
+    "params": [
+      {
+        "name": "page",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 9,
+          "step": 1,
+          "name": "Page"
+        }
+      }
+    ],
+    "transform": [
+      {
+        "window": [{"op": "rank", "as": "AlphabeticalRank"}],
+        "sort": [{"field": "Economy", "order": "ascending"}]
+      },
+      {
+        "filter": "datum.AlphabeticalRank > page * 20 && datum.AlphabeticalRank <= (page + 1) * 20"
+      }
+    ],
+    "mark": {
+      "type": "bar",
+      "tooltip": true
+    },
+    "encoding": {
+      "y": {
+        "field": "Economy",
+        "type": "nominal",
+        "sort": "ascending",
+        "title": "Country"
+      },
+      "x": {
+        "field": "Global rank",
+        "type": "quantitative",
+        "title": "Global Rank"
+      },
+      "tooltip": [
+        {"field": "Economy", "type": "nominal", "title": "Country"},
+        {"field": "Global rank", "type": "quantitative", "title": "Global Rank"},
+        {"field": "Starting a business", "type": "quantitative", "title": "Starting a Business"},
+        {"field": "Dealing with construction permits", "type": "quantitative", "title": "Construction Permits"},
+        {"field": "Getting electricity", "type": "quantitative", "title": "Getting Electricity"},
+        {"field": "Registering property", "type": "quantitative", "title": "Registering Property"},
+        {"field": "Getting credit", "type": "quantitative", "title": "Getting Credit"},
+        {"field": "Protecting minority investors", "type": "quantitative", "title": "Protecting Investors"},
+        {"field": "Paying taxes", "type": "quantitative", "title": "Paying Taxes"},
+        {"field": "Trading across borders", "type": "quantitative", "title": "Trading Across Borders"},
+        {"field": "Enforcing contracts", "type": "quantitative", "title": "Enforcing Contracts"},
+        {"field": "Resolving insolvency", "type": "quantitative", "title": "Resolving Insolvency"}
+      ]
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {
+        "domainWidth": 1,
+        "labelFont": "Roboto",
+        "titleFont": "Roboto"
+      }
+    }
+  }
+  
