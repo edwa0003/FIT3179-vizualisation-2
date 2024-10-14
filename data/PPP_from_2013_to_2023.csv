@@ -45,7 +45,7 @@ Costa Rica,2013,71.837,188.0,Latin America and the Caribbean,14.992,4791.535
 Curacao,2013,3.818,531.0,Latin America and the Caribbean,24.822,153.822
 Cayman Islands,2013,3.733,136.0,Latin America and the Caribbean,64.133,58.212
 Cyprus,2013,26.246,196.0,Western Asia,30.45,1166.968
-Czech Republic,2013,324.03,203.0,Eastern Europe,0.686,10514.272
+Czech Republic,2013,324.03,203.0,Eastern Europe,30.82,10514.272
 Germany,2013,3628.56,276.0,Western Europe,44.994,80645.605
 Djibouti,2013,3.702,262.0,Sub-Saharan Africa,3.81,971.753
 Dominica,2013,0.719,212.0,Latin America and the Caribbean,10.447,68.819
@@ -244,7 +244,7 @@ Costa Rica,2014,78.151,188.0,Latin America and the Caribbean,16.133,4844.288
 Curacao,2014,3.796,531.0,Latin America and the Caribbean,24.348,155.909
 Cayman Islands,2014,3.824,136.0,Latin America and the Caribbean,64.202,59.559
 Cyprus,2014,25.719,196.0,Western Asia,30.169,1176.995
-Czech Republic,2014,342.1,203.0,Eastern Europe,0.673,10525.347
+Czech Republic,2014,342.1,203.0,Eastern Europe,32.50,10525.347
 Germany,2014,3807.113,276.0,Western Europe,47.012,80982.5
 Djibouti,2014,3.978,262.0,Sub-Saharan Africa,4.022,989.087
 Dominica,2014,0.773,212.0,Latin America and the Caribbean,11.148,69.371
@@ -442,7 +442,7 @@ Costa Rica,2015,84.437,188.0,Latin America and the Caribbean,17.249,4895.242
 Curacao,2015,3.797,531.0,Latin America and the Caribbean,24.038,157.98
 Cayman Islands,2015,3.946,136.0,Latin America and the Caribbean,64.778,60.911
 Cyprus,2015,27.057,196.0,Western Asia,31.92,1187.28
-Czech Republic,2015,357.504,203.0,Eastern Europe,0.739,10546.059
+Czech Republic,2015,357.504,203.0,Eastern Europe,33.90,10546.059
 Germany,2015,3889.082,276.0,Western Europe,47.61,81686.611
 Djibouti,2015,4.351,262.0,Sub-Saharan Africa,4.324,1006.259
 Dominica,2015,0.789,212.0,Latin America and the Caribbean,11.277,70.007
@@ -640,7 +640,7 @@ Costa Rica,2016,93.455,188.0,Latin America and the Caribbean,18.898,4945.205
 Curacao,2016,3.776,531.0,Latin America and the Caribbean,23.65,159.664
 Cayman Islands,2016,4.144,136.0,Latin America and the Caribbean,66.572,62.255
 Cyprus,2016,30.552,196.0,Western Asia,35.877,1197.881
-Czech Republic,2016,381.42,203.0,Eastern Europe,0.794,10566.332
+Czech Republic,2016,381.42,203.0,Eastern Europe,36.01,10566.332
 Germany,2016,4165.17,276.0,Western Europe,50.58,82348.669
 Djibouti,2016,4.598,262.0,Sub-Saharan Africa,4.494,1023.261
 Dominica,2016,0.847,212.0,Latin America and the Caribbean,12.093,70.075
@@ -837,7 +837,7 @@ Costa Rica,2017,100.717,188.0,Latin America and the Caribbean,20.168,4993.842
 Curacao,2017,3.896,531.0,Latin America and the Caribbean,24.322,160.175
 Cayman Islands,2017,4.39,136.0,Latin America and the Caribbean,69.038,63.581
 Cyprus,2017,33.015,196.0,Western Asia,38.411,1208.523
-Czech Republic,2017,411.328,203.0,Eastern Europe,0.848,10594.438
+Czech Republic,2017,411.328,203.0,Eastern Europe,38.82,10594.438
 Germany,2017,4386.727,276.0,Western Europe,53.071,82657.002
 Djibouti,2017,4.933,262.0,Sub-Saharan Africa,4.742,1040.233
 Dominica,2017,0.805,212.0,Latin America and the Caribbean,11.436,70.403
@@ -1035,7 +1035,7 @@ Costa Rica,2018,106.583,188.0,Latin America and the Caribbean,21.144,5040.734
 Curacao,2018,3.923,531.0,Latin America and the Caribbean,24.623,159.336
 Cayman Islands,2018,4.735,136.0,Latin America and the Caribbean,72.982,64.884
 Cyprus,2018,35.389,196.0,Western Asia,40.674,1218.831
-Czech Republic,2018,437.356,203.0,Eastern Europe,0.867,10629.928
+Czech Republic,2018,437.356,203.0,Eastern Europe,41.14,10629.928
 Germany,2018,4576.054,276.0,Western Europe,55.196,82905.782
 Djibouti,2018,5.448,262.0,Sub-Saharan Africa,5.154,1057.198
 Dominica,2018,0.907,212.0,Latin America and the Caribbean,12.81,70.823
@@ -1233,7 +1233,7 @@ Costa Rica,2019,116.688,188.0,Latin America and the Caribbean,22.95,5084.532
 Curacao,2019,3.999,531.0,Latin America and the Caribbean,25.397,157.441
 Cayman Islands,2019,4.894,136.0,Latin America and the Caribbean,74.009,66.134
 Cyprus,2019,39.41,196.0,Western Asia,44.685,1228.836
-Czech Republic,2019,478.738,203.0,Eastern Europe,0.935,10671.87
+Czech Republic,2019,478.738,203.0,Eastern Europe,44.86,10671.87
 Germany,2019,4840.312,276.0,Western Europe,58.252,83092.962
 Djibouti,2019,5.877,262.0,Sub-Saharan Africa,5.472,1073.994
 Dominica,2019,1.032,212.0,Latin America and the Caribbean,14.452,71.428
@@ -1431,7 +1431,7 @@ Costa Rica,2020,111.258,188.0,Latin America and the Caribbean,21.717,5123.105
 Curacao,2020,3.377,531.0,Latin America and the Caribbean,21.797,154.947
 Cayman Islands,2020,4.541,136.0,Latin America and the Caribbean,67.467,67.311
 Cyprus,2020,38.174,196.0,Western Asia,42.796,1237.537
-Czech Republic,2020,469.877,203.0,Eastern Europe,1.003,10697.858
+Czech Republic,2020,469.877,203.0,Eastern Europe,43.92,10697.858
 Germany,2020,4815.445,276.0,Western Europe,57.905,83160.871
 Djibouti,2020,6.188,262.0,Sub-Saharan Africa,5.676,1090.156
 Dominica,2020,0.917,212.0,Latin America and the Caribbean,12.744,71.995
@@ -1626,7 +1626,7 @@ Costa Rica,2021,122.15,188.0,Latin America and the Caribbean,23.7,5153.957
 Curacao,2021,3.834,531.0,Latin America and the Caribbean,25.164,152.369
 Cayman Islands,2021,5.199,136.0,Latin America and the Caribbean,76.297,68.136
 Cyprus,2021,43.637,196.0,Western Asia,48.467,1244.188
-Czech Republic,2021,508.67,203.0,Eastern Europe,1.057,10505.772
+Czech Republic,2021,508.67,203.0,Eastern Europe,48.42,10505.772
 Germany,2021,5153.136,276.0,Western Europe,61.94,83196.078
 Djibouti,2021,6.669,262.0,Sub-Saharan Africa,6.032,1105.557
 Dominica,2021,1.048,212.0,Latin America and the Caribbean,14.472,72.412
@@ -1821,7 +1821,7 @@ Costa Rica,2022,135.64,188.0,Latin America and the Caribbean,26.181,5180.829
 Curacao,2022,4.428,531.0,Latin America and the Caribbean,29.524,149.996
 Cayman Islands,2022,5.852,136.0,Latin America and the Caribbean,85.168,68.706
 Cyprus,2022,49.082,196.0,Western Asia,53.776,1251.488
-Czech Republic,2022,551.769,203.0,Eastern Europe,1.112,10672.118
+Czech Republic,2022,551.769,203.0,Eastern Europe,51.70,10672.118
 Germany,2022,5582.288,276.0,Western Europe,66.616,83797.985
 Djibouti,2022,7.405,262.0,Sub-Saharan Africa,6.606,1120.849
 Dominica,2022,1.184,212.0,Latin America and the Caribbean,16.283,72.737
@@ -2007,7 +2007,7 @@ Comoros,2023,3.285,174.0,Sub-Saharan Africa,3.855,852.075
 Cabo Verde,2023,5.44,132.0,Sub-Saharan Africa,9.086,598.682
 Costa Rica,2023,145.693,188.0,Latin America and the Caribbean,27.952,5212.173
 Cyprus,2023,53.033,196.0,Western Asia,57.1,1260.138
-Czech Republic,2023,585.187,203.0,Eastern Europe,1.13,10873.689
+Czech Republic,2023,585.187,203.0,Eastern Europe,53.82,10873.689
 Germany,2023,5857.856,276.0,Western Europe,69.338,84482.267
 Djibouti,2023,8.187,262.0,Sub-Saharan Africa,7.204,1136.455
 Dominica,2023,1.285,212.0,Latin America and the Caribbean,17.599,73.04
