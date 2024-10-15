@@ -93,6 +93,86 @@
           {"field": "Improvement from GSER 2022", "type": "quantitative", "title": "Improvement from GSER 2022"}
         ]
       }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": -30,  
+            "latitude": 40,   
+            "text": "Newest addition in the group"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "size": {"value": 10},  
+        "color": {"value": "black"}
+      },
+      "text": {
+        "align": "left",
+        "baseline": "middle"
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 2
+      },
+      "data": {
+        "values": [
+          {"longitude": 8.5417, "latitude": 47.3769},  
+          {"longitude": -30, "latitude": 41}       
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
+      }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": -40, 
+            "latitude": 20,  
+            "text": "Country with the most startup ecosystems"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "size": {"value": 10},  
+        "color": {"value": "black"}
+      },
+      "text": {
+        "align": "left",
+        "baseline": "middle"
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 2
+      },
+      "data": {
+        "values": [
+          {"longitude": -95.7129, "latitude": 37.0902}, 
+          {"longitude": -62, "latitude": 20}            
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
+      }
     }
   ],
   "config": {
