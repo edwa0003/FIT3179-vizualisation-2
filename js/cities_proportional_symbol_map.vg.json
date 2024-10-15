@@ -111,10 +111,6 @@
         "text": {"field": "text", "type": "nominal"},
         "size": {"value": 10},  
         "color": {"value": "black"}
-      },
-      "text": {
-        "align": "left",
-        "baseline": "middle"
       }
     },
     {
@@ -151,10 +147,6 @@
         "text": {"field": "text", "type": "nominal"},
         "size": {"value": 10},  
         "color": {"value": "black"}
-      },
-      "text": {
-        "align": "left",
-        "baseline": "middle"
       }
     },
     {

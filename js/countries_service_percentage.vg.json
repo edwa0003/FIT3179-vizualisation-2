@@ -172,6 +172,46 @@
           }
         ]
       }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": 77,
+            "latitude": 4,
+            "text": "High economic growth due to"
+          },
+          {
+            "longitude": 77,
+            "latitude": 2,
+            "text": "expansion of it's service sector"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 1
+      },
+      "data": {
+        "values": [
+          {"longitude": 78, "latitude": 15}, 
+          {"longitude": 75.5, "latitude": 5}
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
+      }
     }
   ]
 }

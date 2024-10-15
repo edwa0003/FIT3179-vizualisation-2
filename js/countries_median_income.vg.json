@@ -41,7 +41,7 @@
           [179.194, -7.1095]
         ],
         "labels": [
-          "World","Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
+          "World", "Martinique", "Bolivia", "France", "Serbia", "Togo", "Uganda", "Botswana", "Qatar", "Uzbekistan", "China", "Singapore", "Tuvalu"
         ],
         "name": "Focus Point: "
       }
@@ -141,6 +141,111 @@
             "format": ".2f"
           }
         ]
+      }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": 70,
+            "latitude": 3,
+            "text": "Popular outsourcing destination"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 1
+      },
+      "data": {
+        "values": [
+          {"longitude": 80, "latitude": 20}, 
+          {"longitude": 70, "latitude": 5}
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
+      }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": 143,
+            "latitude": 17,
+            "text": "Popular outsourcing destination"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 1
+      },
+      "data": {
+        "values": [
+          {"longitude": 130, "latitude": 15}, 
+          {"longitude": 125, "latitude": 7}
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
+      }
+    },
+    {
+      "mark": "text",
+      "data": {
+        "values": [
+          {
+            "longitude": 65,
+            "latitude": -30,
+            "text": "Popular outsourcing destination"
+          }
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "black",
+        "strokeWidth": 1
+      },
+      "data": {
+        "values": [
+          {"longitude": 45, "latitude": -30}, 
+          {"longitude": 32, "latitude": -30}
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"}
       }
     }
   ]
