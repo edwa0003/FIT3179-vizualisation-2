@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Ease of business bar chart (alphabetically)",
+    "title": "Ease of business bar chart (2019)",
     "width": 600,
     "height": 500,
     "data": {
